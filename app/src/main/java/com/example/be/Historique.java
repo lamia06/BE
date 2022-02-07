@@ -58,7 +58,7 @@ public class Historique extends AppCompatActivity {
 
 
         JsonPlaceHolderApi jsonPlaceHolderApi =  retrofit.create(JsonPlaceHolderApi.class);
-        Call<List<MultiTransfer>> call1 = jsonPlaceHolderApi.getMultitransfers(name,idName,idName);
+        Call<List<MultiTransfer>> call1 = jsonPlaceHolderApi.getMultitransfers(name,idName);
         call1.enqueue(new Callback<List<MultiTransfer>>() {
             @Override
             public void onResponse(Call<List<MultiTransfer>> call, Response<List<MultiTransfer>> response) {

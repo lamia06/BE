@@ -46,9 +46,9 @@ public interface JsonPlaceHolderApi {
                                  @Header("id") Integer id ,@Body SpinnerModel body);
 
 
-    @GET("client/{id}")
+    @GET("client")
     Call<List<MultiTransfer>> getMultitransfers(@Header("Authorization") String token,
-                                                @Header("id") Integer id,@Path("id") Integer id1);
+                                                @Header("id") Integer id);
     @POST("createTransfer")
     Call<MultiTransfer> postTransfer(@Header("Authorization") String token,
                                      @Header("id") Integer id,@Body MultiTransfer body);
